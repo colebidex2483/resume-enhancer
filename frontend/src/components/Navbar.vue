@@ -114,10 +114,10 @@
         <!-- Mobile Menu -->
         <div v-if="isMobileMenuOpen" class="lg:hidden bg-white dark:bg-gray-800 shadow-lg">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <div>
+                <!-- <div>
                     <button @click="toggleMobileMenu(0)"
                         class="w-full flex justify-between items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-700">
-                        Career Tools
+                        More
                         <svg class="w-4 h-4 ml-1 transition-transform duration-200"
                             :class="{ 'rotate-180': activeMobileMenu === 0 }" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24">
@@ -133,7 +133,7 @@
                             {{ subItem.name }}
                         </router-link>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="pt-4 border-t border-gray-200 dark:border-gray-700">
                     <a href="https://www.buymeacoffee.com/yourusername" target="_blank" rel="noopener noreferrer"
@@ -153,12 +153,12 @@
 
 <script setup>
 import { ref } from 'vue'
-import {
-    DocumentTextIcon,
-    ChatBubbleLeftRightIcon,
-    AcademicCapIcon,
-    CogIcon,
-} from '@heroicons/vue/24/outline'
+// import {
+//     DocumentTextIcon,
+//     ChatBubbleLeftRightIcon,
+//     AcademicCapIcon,
+//     CogIcon,
+// } from '@heroicons/vue/24/outline'
 
 defineProps({
     darkMode: {
@@ -171,42 +171,42 @@ defineProps({
 
 const isMobileMenuOpen = ref(false)
 // const activeMegaMenu = ref(null)
-const activeMobileMenu = ref(null)
+// const activeMobileMenu = ref(null)
 
 // const toggleMegaMenu = (index) => {
 //     activeMegaMenu.value = activeMegaMenu.value === index ? null : index
 // }
 
-const toggleMobileMenu = (index) => {
-    activeMobileMenu.value = activeMobileMenu.value === index ? null : index
-}
+// const toggleMobileMenu = (index) => {
+//     activeMobileMenu.value = activeMobileMenu.value === index ? null : index
+// }
 
-const navItems = [
-    {
-        name: 'Career Tools',
-        path: '/tools',
-        subItems: [
-            {
-                name: 'Resume Builder',
-                path: '/resume-builder',
-                icon: DocumentTextIcon
-            },
-            {
-                name: 'Interview Prep',
-                path: '/interview-prep',
-                icon: ChatBubbleLeftRightIcon
-            },
-            {
-                name: 'Skill Assessment',
-                path: '/skill-assessment',
-                icon: AcademicCapIcon
-            },
-            {
-                name: 'Salary Calculator',
-                path: '/salary-calculator',
-                icon: CogIcon
-            }
-        ]
-    }
-]
+// const navItems = [
+//     {
+//         name: 'Career Tools',
+//         path: '/tools',
+//         subItems: [
+//             {
+//                 name: 'Resume Builder',
+//                 path: '/resume-builder',
+//                 icon: DocumentTextIcon
+//             },
+//             {
+//                 name: 'Interview Prep',
+//                 path: '/interview-prep',
+//                 icon: ChatBubbleLeftRightIcon
+//             },
+//             {
+//                 name: 'Skill Assessment',
+//                 path: '/skill-assessment',
+//                 icon: AcademicCapIcon
+//             },
+//             {
+//                 name: 'Salary Calculator',
+//                 path: '/salary-calculator',
+//                 icon: CogIcon
+//             }
+//         ]
+//     }
+// ]
 </script>
