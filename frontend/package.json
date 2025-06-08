@@ -12,6 +12,14 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@heroicons/vue": "^2.2.0",
+    "@tiptap/extension-hard-break": "^2.12.0",
+    "@tiptap/extension-horizontal-rule": "^2.12.0",
+    "@tiptap/extension-placeholder": "^2.12.0",
+    "@tiptap/extension-text-align": "^2.12.0",
+    "@tiptap/extension-underline": "^2.12.0",
+    "@tiptap/starter-kit": "^2.12.0",
+    "@tiptap/vue-3": "^2.12.0",
     "axios": "^1.8.4",
     "pinia": "^2.1.7",
     "vue": "^3.4.29",
