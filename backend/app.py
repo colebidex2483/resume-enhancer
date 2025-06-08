@@ -238,7 +238,8 @@ def generate_proposal():
         2. Customize the template by replacing placeholders with relevant content
         3. Keep the professional tone but make it personalized
         4. Highlight how the freelancer can solve the client's specific problems
-        5. Keep the length appropriate (typically 3-4 paragraphs)
+        5. Keep the length appropriate (typically 4-5 paragraphs)
+        6. stick to the structure of the template most importantly headings and paragraphs
         
         Return ONLY the customized proposal content, no additional commentary.
         """

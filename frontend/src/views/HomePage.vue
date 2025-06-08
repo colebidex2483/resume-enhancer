@@ -1,23 +1,22 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-gray-800 to-gray-700 py-10 px-4 sm:px-6 lg:px-8">
+  <div
+    class="min-h-screen bg-gradient-to-br from-gray-100 to-gray-50 dark:from-gray-800 dark:to-gray-700 py-10 px-4 sm:px-6 lg:px-8">
     <div class="mx-auto">
       <!-- Header with glowing effect -->
       <div class="text-center mb-12">
-        <h1
-          class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-600 sm:text-5xl mb-3">
-          Corehotech Career Toolkit
-        </h1>
-        <p class="text-xl text-gray-300">
+
+        <p class="text-xl text-gray-500 dark:text-gray-400">
           AI-powered tools to boost your job applications
         </p>
       </div>
 
       <!-- Tab Navigation -->
       <div class="mb-6 sm:mb-8 flex justify-center">
-        <div class="inline-flex rounded-md bg-gray-800 p-1 shadow-lg w-full sm:w-auto">
+        <div class="inline-flex rounded-md bg-gray-200 dark:bg-gray-800 p-1 shadow-lg w-full sm:w-auto">
+          <!-- Resume Button -->
           <button @click="activeTab = 'resume'" :class="{
             'bg-indigo-600 text-white': activeTab === 'resume',
-            'text-gray-300 hover:text-white': activeTab !== 'resume'
+            'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white': activeTab !== 'resume'
           }"
             class="px-4 py-2 sm:px-6 sm:py-3 rounded-md text-sm font-medium transition-all duration-300 w-1/2 sm:w-auto text-center">
             <span class="flex items-center justify-center sm:justify-start">
@@ -31,9 +30,11 @@
               <span class="sm:hidden">Resume</span>
             </span>
           </button>
+
+          <!-- Upwork Button -->
           <button @click="activeTab = 'upwork'" :class="{
             'bg-indigo-600 text-white': activeTab === 'upwork',
-            'text-gray-300 hover:text-white': activeTab !== 'upwork'
+            'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white': activeTab !== 'upwork'
           }"
             class="px-4 py-2 sm:px-6 sm:py-3 rounded-md text-sm font-medium transition-all duration-300 w-1/2 sm:w-auto text-center">
             <span class="flex items-center justify-center sm:justify-start">
@@ -51,11 +52,11 @@
 
       <!-- Resume Enhancer Tab -->
       <div v-if="activeTab === 'resume'"
-        class="bg-gray-800  bg-opacity-50 backdrop-blur-lg rounded-xl shadow-2xl p-6 mb-8 border border-gray-100 transition-all duration-500">
+        class="bg-gray-100 dark:bg-gray-800 dark:bg-opacity-50 backdrop-blur-lg rounded-xl shadow-2xl p-6 mb-8 border border-gray-200 dark:border-gray-700 transition-all duration-500">
         <div class="flex flex-col md:flex-row gap-x-8">
           <div class="flex-1">
-            <h2 class="text-xl font-medium text-white mb-7 flex items-center">
-              <span class="bg-indigo-600 p-2 rounded-lg mr-3">
+            <h2 class="text-xl font-medium text-gray-800 dark:text-white mb-7 flex items-center">
+              <span class="bg-indigo-100 dark:bg-indigo-600 text-indigo-700 dark:text-white p-2 rounded-lg mr-3">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd"
                     d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm2 10a1 1 0 10-2 0 1 1 0 002 0zm2-3a1 1 0 011 1v5a1 1 0 11-2 0v-5a1 1 0 011-1zm4-1a1 1 0 10-2 0v6a1 1 0 102 0V8z"
@@ -69,8 +70,8 @@
 
           <div class="flex-1">
             <div class="flex mt-0 flex-col md:flex-row gap-x-5">
-              <h2 class="text-xl font-medium text-white mb-4 flex items-center">
-                <span class="bg-indigo-600 p-2 rounded-lg mr-3">
+              <h2 class="text-xl font-medium text-gray-800 dark:text-white mb-4 flex items-center">
+                <span class="bg-indigo-100 dark:bg-indigo-600 text-indigo-700 dark:text-white p-2 rounded-lg mr-3">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
                     <path fill-rule="evenodd"
@@ -80,7 +81,7 @@
                 </span>
                 Job Description
               </h2>
-  
+
               <div class="flex mb-4">
                 <button @click="jobInputMode = 'text'" :class="{
                   'bg-indigo-600 text-white': jobInputMode === 'text',
@@ -101,7 +102,7 @@
 
             <div v-if="jobInputMode === 'text'" class="mt-2">
               <textarea id="job-description" v-model="jobDescriptionText" rows="8"
-                class="bg-gray-700 h-64 text-gray-200 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-600 rounded-md p-3 placeholder-gray-400"
+                class="dark:bg-gray-700 h-64 dark:text-gray-100 text-gray-900 shadow-sm focus:outline-none focus:ring-0 focus:border-transparent block w-full sm:text-sm border border-gray-600 rounded-md p-3 placeholder-gray-500 dark:placeholder-gray-400"
                 placeholder="Paste the job description here..."></textarea>
             </div>
 
@@ -115,7 +116,7 @@
                 'bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 shadow-lg': canSubmitResume,
                 'bg-gray-600 cursor-not-allowed': !canSubmitResume
               }"
-                class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all duration-300 transform hover:scale-105">
+                class="inline-flex items-center px-5 py-2 border border-transparent text-base font-medium rounded-md text-white transition-all duration-300 transform hover:scale-105">
                 <span v-if="!isLoading">Enhance My Resume</span>
                 <span v-else>Processing...</span>
                 <svg v-if="isLoading" class="animate-spin -mr-1 ml-3 h-5 w-5 text-white"
@@ -134,11 +135,11 @@
 
       <!-- Upwork Proposal Tab -->
       <div v-if="activeTab === 'upwork'"
-        class="bg-gray-800 bg-opacity-50 backdrop-blur-lg rounded-xl shadow-2xl p-6 mb-8 border border-gray-700 transition-all duration-500">
-        <div class="flex flex-col md:flex-row gap-x-4">
+        class="bg-gray-100 dark:bg-gray-800 dark:bg-opacity-50 backdrop-blur-lg rounded-xl shadow-2xl md:p-6 mb-8 border border-gray-200 dark:border-gray-700 transition-all duration-500">
+        <div class="flex flex-col p-3 md:p-0 md:flex-row gap-x-4">
           <div class="mb-8 flex-1">
-            <h2 class="text-xl font-medium text-white mb-4 flex items-center">
-              <span class="bg-indigo-600 p-2 rounded-lg mr-3">
+            <h2 class="text-xl font-medium text-gray-800 dark:text-white mb-4 flex items-center">
+              <span class="bg-indigo-100 dark:bg-indigo-600 text-indigo-700 dark:text-white p-2 rounded-lg mr-3">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
                   <path fill-rule="evenodd"
@@ -149,13 +150,13 @@
               Job Description
             </h2>
             <textarea v-model="upworkJobDescription" rows="6"
-              class="bg-gray-700 text-gray-200 shadow-sm h-64 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-600 rounded-md p-3 placeholder-gray-400"
+              class="dark:bg-gray-700 h-64 dark:text-gray-100 text-gray-900 shadow-sm focus:outline-none focus:ring-0 focus:border-transparent block w-full sm:text-sm border border-gray-600 rounded-md p-3 placeholder-gray-500 dark:placeholder-gray-400"
               placeholder="Paste the Upwork job description here..."></textarea>
           </div>
 
           <div class="mb-8 flex-1">
-            <h2 class="text-xl font-medium text-white mb-4 flex items-center">
-              <span class="bg-indigo-600 p-2 rounded-lg mr-3">
+            <h2 class="text-xl font-medium text-gray-800 dark:text-white mb-4 flex items-center">
+              <span class="bg-indigo-100 dark:bg-indigo-600 text-indigo-700 dark:text-white p-2 rounded-lg mr-3">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd"
                     d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z"
@@ -164,10 +165,12 @@
               </span>
               Your Proposal Template
             </h2>
+
             <textarea v-model="upworkProposalTemplate" rows="8"
-              class="scroll-box bg-gray-700 text-gray-200 h-64 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-600 rounded-md p-3 placeholder-gray-400"
+              class="scroll-box dark:bg-gray-700 h-64 dark:text-gray-100 text-gray-900 shadow-sm focus:outline-none focus:ring-0 focus:border-transparent block w-full sm:text-sm border border-gray-600 rounded-md p-3 placeholder-gray-500 dark:placeholder-gray-400"
               placeholder="Enter your proposal template. You can include placeholders like [ClientName], [YourName], etc."></textarea>
-            <p class="mt-2 text-sm text-gray-400">Tip: Use placeholders like [ClientName], [YourName], [YourExperience]
+            <p class="mt-2 text-sm dark:text-gray-400 text-gray-500">Tip: Use placeholders like [ClientName],
+              [YourName], [YourExperience]
               that will be automatically replaced.</p>
 
             <div class="mt-3 flex md:justify-center justify-start">
@@ -175,7 +178,7 @@
                 'bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 shadow-lg': canSubmitProposal,
                 'bg-gray-600 cursor-not-allowed': !canSubmitProposal
               }"
-                class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all duration-300 transform hover:scale-105">
+                class="inline-flex items-center px-5 py-2 border border-transparent text-base font-medium rounded-md text-white focus:outline-none transition-all duration-300 transform hover:scale-105">
                 <span v-if="!isLoadingProposal">Generate Proposal</span>
                 <span v-else>Generating...</span>
                 <svg v-if="isLoadingProposal" class="animate-spin -mr-1 ml-3 h-5 w-5 text-white"
@@ -192,10 +195,12 @@
 
 
         <!-- Proposal Result -->
-        <div v-if="generatedProposal" class="mt-8 flex-1 bg-gray-900 rounded-lg p-6 border border-gray-700">
-          <div class="flex justify-between items-center mb-4">
-            <h3 class="text-lg font-medium text-white">Your Custom Proposal</h3>
-            <button @click="copyProposal" class="text-indigo-400 hover:text-indigo-300 flex items-center text-sm">
+        <div v-if="generatedProposal" class="mt-8 flex-1 rounded-lg md:p-6 p-4 border
+         bg-white border-gray-200 text-gray-900 dark:bg-gray-900 dark:border-gray-700 dark:text-white ">
+          <div class="flex justify-between items-center mb-4  dark:border-gray-400">
+            <h3 class="text-lg font-medium">Your Custom Proposal</h3>
+            <button @click="copyProposal"
+              class="text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300 flex items-center text-sm">
               <svg v-if="showToast == 'Copy'" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none"
                 viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -205,12 +210,15 @@
                 stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-
               {{ showToast }}
             </button>
           </div>
-          <div class="bg-gray-800 p-4 rounded-md">
-            <pre class="text-gray-300 whitespace-pre-wrap">{{ generatedProposal }}</pre>
+
+          <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg overflow-y-auto">
+            <div contenteditable="true"
+              class="outline-none focus:outline-none whitespace-pre-wrap text-gray-900 dark:text-gray-100">
+              {{ generatedProposal }}
+            </div>
           </div>
         </div>
       </div>
@@ -417,13 +425,14 @@ button {
 
 /* Scrollbar Thumb */
 .scroll-box::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #6366f1, #22d3ee); /* Green to cyan */
+  background: linear-gradient(180deg, #6366f1, #22d3ee);
+  /* Green to cyan */
   border-radius: 10px;
 }
 
 /* Scrollbar Track */
 .scroll-box::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05); 
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
 }
 
