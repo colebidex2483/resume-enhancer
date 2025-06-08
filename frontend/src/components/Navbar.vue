@@ -61,7 +61,7 @@
                 <!-- Right Side Controls -->
                 <div class="flex items-center space-x-4">
                     <!-- Support Me Button -->
-                    <a href="https://www.buymeacoffee.com/yourusername" target="_blank" rel="noopener noreferrer"
+                    <!-- <a href="https://www.buymeacoffee.com/yourusername" target="_blank" rel="noopener noreferrer"
                         class="hidden md:flex items-center px-4 py-2 text-sm font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-200 group">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 24 24"
                             fill="currentColor">
@@ -70,7 +70,7 @@
                         </svg>
 
                         Buy me a coffee
-                    </a>
+                    </a> -->
 
                     <!-- Dark Mode Toggle -->
                     <button @click="$emit('update:darkMode', !darkMode)"
@@ -136,7 +136,7 @@
                 </div> -->
 
                 <div class="pt-4 border-t border-gray-200 dark:border-gray-700">
-                    <a href="https://www.buymeacoffee.com/yourusername" target="_blank" rel="noopener noreferrer"
+                    <!-- <a href="https://www.buymeacoffee.com/yourusername" target="_blank" rel="noopener noreferrer"
                         class="w-full flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-blue-600 to-purple-600">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 24 24"
                             fill="currentColor">
@@ -144,7 +144,7 @@
                                 d="M18 8h1a3 3 0 010 6h-1v1a5 5 0 01-5 5H7a5 5 0 01-5-5V8h16zm1 4a1 1 0 000-2h-1v2h1zM6 2a1 1 0 011 1v2a1 1 0 11-2 0V3a1 1 0 011-1zm4 0a1 1 0 011 1v2a1 1 0 11-2 0V3a1 1 0 011-1zm4 0a1 1 0 011 1v2a1 1 0 11-2 0V3a1 1 0 011-1z" />
                         </svg>
                         Support My Work
-                    </a>
+                    </a> -->
                 </div>
             </div>
         </div>
