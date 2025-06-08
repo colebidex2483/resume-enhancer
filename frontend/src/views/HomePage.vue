@@ -216,7 +216,7 @@
 
           <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg overflow-y-auto">
             <div contenteditable="true"
-              class="outline-none focus:outline-none whitespace-pre-wrap text-gray-900 dark:text-gray-100">
+              class="outline-none focus:outline-none whitespace-pre-wrap text-gray-900 dark:text-gray-300">
               {{ generatedProposal }}
             </div>
           </div>
