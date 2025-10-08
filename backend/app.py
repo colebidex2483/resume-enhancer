@@ -105,7 +105,7 @@ def enhance_resume_with_gemini(resume_text, job_description, key_requirements):
     
     try:
         response = gemini_client.models.generate_content(
-            model="gemini-1.5-flash",
+            model="gemini-2.5-flash",
             contents=prompt
         )
         return response.text
@@ -245,7 +245,7 @@ def generate_proposal():
         """
         
         response = gemini_client.models.generate_content(
-            model="gemini-1.5-flash",
+            model="gemini-2.5-flash",
             contents=prompt
         )
         
