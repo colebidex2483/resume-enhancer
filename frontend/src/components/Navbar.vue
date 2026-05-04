@@ -6,20 +6,14 @@
             <div class="flex items-center justify-between h-16">
                 <!-- Logo -->
                 <div class="flex items-center">
-                    <div class="flex-shrink-0">
-                        <img class=" w-28 h-10 text-xl" src="../assets/logo2.png" />
-                        <!-- <span
-                            class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent dark:from-blue-400 dark:to-purple-400">
-                            Corehotech AI
-                        </span> -->
+                    <div class="flex-shrink-0"> <img class=" w-28 h-10 text-xl" src="../assets/logo2.png" />
+                        <!-- <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent dark:from-blue-400 dark:to-purple-400"> Corehotech AI </span> -->
                     </div>
-
-                    <!-- Single Desktop Menu Item -->
                 </div>
                 <!-- <div class="hidden lg:flex ml-10">
                     <div class="relative group"> -->
-                        <!-- More Button -->
-                        <!-- <button @click="toggleMegaMenu(0)"
+                <!-- More Button -->
+                <!-- <button @click="toggleMegaMenu(0)"
                             class=" py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 flex items-center"
                             :class="{ 'text-blue-600 dark:text-blue-400': activeMegaMenu === 0 }">
                             More
@@ -31,8 +25,8 @@
                             </svg>
                         </button> -->
 
-                        <!-- Mega Menu Dropdown -->
-                        <!-- <div v-if="activeMegaMenu === 0"
+                <!-- Mega Menu Dropdown -->
+                <!-- <div v-if="activeMegaMenu === 0"
                             class="absolute left-1/2 transform -translate-x-1/2 w-[90vw] max-w-[400px] mt-2 z-50 px-2 pt-2"
                             @mouseleave="activeMegaMenu = null">
                             <div
@@ -54,14 +48,14 @@
                                 </div>
                             </div>
                         </div> -->
-                    <!-- </div>
+                <!-- </div>
                 </div> -->
 
 
                 <!-- Right Side Controls -->
                 <div class="flex items-center space-x-4">
                     <!-- Support Me Button -->
-                    <!-- <a href="https://www.buymeacoffee.com/yourusername" target="_blank" rel="noopener noreferrer"
+                    <a href="https://www.buymeacoffee.com/colebidex" target="_blank" rel="noopener noreferrer"
                         class="hidden md:flex items-center px-4 py-2 text-sm font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-200 group">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 24 24"
                             fill="currentColor">
@@ -70,7 +64,7 @@
                         </svg>
 
                         Buy me a coffee
-                    </a> -->
+                    </a>
 
                     <!-- Dark Mode Toggle -->
                     <button @click="$emit('update:darkMode', !darkMode)"
@@ -136,7 +130,7 @@
                 </div> -->
 
                 <div class="pt-4 border-t border-gray-200 dark:border-gray-700">
-                    <!-- <a href="https://www.buymeacoffee.com/yourusername" target="_blank" rel="noopener noreferrer"
+                    <a href="https://www.buymeacoffee.com/colebidex" target="_blank" rel="noopener noreferrer"
                         class="w-full flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-blue-600 to-purple-600">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 24 24"
                             fill="currentColor">
@@ -144,7 +138,7 @@
                                 d="M18 8h1a3 3 0 010 6h-1v1a5 5 0 01-5 5H7a5 5 0 01-5-5V8h16zm1 4a1 1 0 000-2h-1v2h1zM6 2a1 1 0 011 1v2a1 1 0 11-2 0V3a1 1 0 011-1zm4 0a1 1 0 011 1v2a1 1 0 11-2 0V3a1 1 0 011-1zm4 0a1 1 0 011 1v2a1 1 0 11-2 0V3a1 1 0 011-1z" />
                         </svg>
                         Support My Work
-                    </a> -->
+                    </a>
                 </div>
             </div>
         </div>
