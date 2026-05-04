@@ -55,7 +55,7 @@
                 <!-- Right Side Controls -->
                 <div class="flex items-center space-x-4">
                     <!-- Support Me Button -->
-                    <a href="https://www.buymeacoffee.com/colebidex" target="_blank" rel="noopener noreferrer"
+                    <!-- <a href="https://www.buymeacoffee.com/colebidex" target="_blank" rel="noopener noreferrer"
                         class="hidden md:flex items-center px-4 py-2 text-sm font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-200 group">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 24 24"
                             fill="currentColor">
@@ -64,7 +64,7 @@
                         </svg>
 
                         Buy me a coffee
-                    </a>
+                    </a> -->
 
                     <!-- Dark Mode Toggle -->
                     <button @click="$emit('update:darkMode', !darkMode)"
