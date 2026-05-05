@@ -52,7 +52,7 @@
 
       <!-- Resume Enhancer Tab -->
       <div v-if="activeTab === 'resume'"
-        class="bg-gray-100 dark:bg-gray-800 dark:bg-opacity-50 backdrop-blur-lg rounded-xl shadow-2xl p-6 mb-8 border border-gray-200 dark:border-gray-700 transition-all duration-500">
+        class="bg-gray-100 dark:bg-gray-800 dark:bg-opacity-50 rounded-xl p-6 mb-8 border border-gray-200 dark:border-gray-700 transition-all duration-500">
         <div class="flex flex-col md:flex-row gap-x-8">
           <div class="flex-1">
             <h2 class="text-xl font-medium text-gray-800 dark:text-white mb-7 flex items-center">
@@ -135,92 +135,95 @@
 
       <!-- Upwork Proposal Tab -->
       <div v-if="activeTab === 'upwork'"
-        class="bg-gray-100 dark:bg-gray-800 dark:bg-opacity-50 backdrop-blur-lg rounded-xl shadow-2xl md:p-6 mb-8 border border-gray-200 dark:border-gray-700 transition-all duration-500">
-        <div class="flex flex-col p-3 md:p-0 md:flex-row gap-x-4">
-          <div class="mb-8 flex-1">
-            <h2 class="text-xl font-medium text-gray-800 dark:text-white mb-4 flex items-center">
-              <span class="bg-indigo-100 dark:bg-indigo-600 text-indigo-700 dark:text-white p-2 rounded-lg mr-3">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
-                  <path fill-rule="evenodd"
-                    d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z"
-                    clip-rule="evenodd" />
-                </svg>
-              </span>
-              Job Description
-            </h2>
-            <textarea v-model="upworkJobDescription" rows="6"
-              class="dark:bg-gray-700 h-64 dark:text-gray-100 text-gray-900 shadow-sm focus:outline-none focus:ring-0 focus:border-transparent block w-full sm:text-sm border border-gray-600 rounded-md p-3 placeholder-gray-500 dark:placeholder-gray-400"
-              placeholder="Paste the Upwork job description here..."></textarea>
+        class="bg-gray-100 dark:bg-gray-800 dark:bg-opacity-50 rounded-xl md:p-3 mb-8 border border-gray-200 dark:border-gray-700 transition-all duration-500">
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3 ">
+          <div class="flex md:col-span-1 flex-col p-3 md:p-0 gap-x-4">
+            <div class="mb-8 ">
+              <h2 class="text-xl font-medium text-gray-800 dark:text-white mb-4 flex items-center">
+                <span class="bg-indigo-100 dark:bg-indigo-600 text-indigo-700 dark:text-white p-2 rounded-lg mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                    <path fill-rule="evenodd"
+                      d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+                Job Description
+              </h2>
+              <textarea v-model="upworkJobDescription" rows="6"
+                class="dark:bg-gray-700 h-64 dark:text-gray-100 text-gray-900 shadow-sm focus:outline-none focus:ring-0 focus:border-transparent block w-full sm:text-sm border border-gray-600 rounded-md p-3 placeholder-gray-500 dark:placeholder-gray-400"
+                placeholder="Paste the Upwork job description here..."></textarea>
+            </div>
+
+            <div class="mb-8 ">
+              <h2 class="text-xl font-medium text-gray-800 dark:text-white mb-4 flex items-center">
+                <span class="bg-indigo-100 dark:bg-indigo-600 text-indigo-700 dark:text-white p-2 rounded-lg mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+                Your Proposal Template
+              </h2>
+
+              <textarea v-model="upworkProposalTemplate" rows="8"
+                class="scroll-box dark:bg-gray-700 h-64 dark:text-gray-100 text-gray-900 shadow-sm focus:outline-none focus:ring-0 focus:border-transparent block w-full sm:text-sm border border-gray-600 rounded-md p-3 placeholder-gray-500 dark:placeholder-gray-400"
+                placeholder="Enter your proposal template. You can include placeholders like [ClientName], [YourName], etc."></textarea>
+              <p class="mt-2 text-sm dark:text-gray-400 text-gray-500">Tip: Use placeholders like [ClientName],
+                [YourName], [YourExperience]
+                that will be automatically replaced.</p>
+
+              <div class="mt-3 flex md:justify-center justify-start">
+                <button @click="generateProposal" :disabled="!canSubmitProposal" :class="{
+                  'bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 shadow-lg': canSubmitProposal,
+                  'bg-gray-600 cursor-not-allowed': !canSubmitProposal
+                }"
+                  class="inline-flex items-center px-5 py-2 border border-transparent text-base font-medium rounded-md text-white focus:outline-none transition-all duration-300 transform hover:scale-105">
+                  <span v-if="!isLoadingProposal">Generate Proposal</span>
+                  <span v-else>Generating...</span>
+                  <svg v-if="isLoadingProposal" class="animate-spin -mr-1 ml-3 h-5 w-5 text-white"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                    </path>
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
-
-          <div class="mb-8 flex-1">
-            <h2 class="text-xl font-medium text-gray-800 dark:text-white mb-4 flex items-center">
-              <span class="bg-indigo-100 dark:bg-indigo-600 text-indigo-700 dark:text-white p-2 rounded-lg mr-3">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd"
-                    d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z"
-                    clip-rule="evenodd" />
+          <!-- Proposal Result -->
+          <div v-if="generatedProposal" class="mt-8 rounded-lg md:col-span-2 md:p-6 p-4 border bg-white border-gray-200 text-gray-900 dark:bg-gray-900 dark:border-gray-700 dark:text-white ">
+            <div class="flex justify-between items-center mb-4  dark:border-gray-400">
+              <h3 class="text-lg font-medium">Your Custom Proposal</h3>
+              <button @click="copyProposal"
+                class="text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300 flex items-center text-sm">
+                <svg v-if="showToast == 'Copy'" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
                 </svg>
-              </span>
-              Your Proposal Template
-            </h2>
-
-            <textarea v-model="upworkProposalTemplate" rows="8"
-              class="scroll-box dark:bg-gray-700 h-64 dark:text-gray-100 text-gray-900 shadow-sm focus:outline-none focus:ring-0 focus:border-transparent block w-full sm:text-sm border border-gray-600 rounded-md p-3 placeholder-gray-500 dark:placeholder-gray-400"
-              placeholder="Enter your proposal template. You can include placeholders like [ClientName], [YourName], etc."></textarea>
-            <p class="mt-2 text-sm dark:text-gray-400 text-gray-500">Tip: Use placeholders like [ClientName],
-              [YourName], [YourExperience]
-              that will be automatically replaced.</p>
-
-            <div class="mt-3 flex md:justify-center justify-start">
-              <button @click="generateProposal" :disabled="!canSubmitProposal" :class="{
-                'bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 shadow-lg': canSubmitProposal,
-                'bg-gray-600 cursor-not-allowed': !canSubmitProposal
-              }"
-                class="inline-flex items-center px-5 py-2 border border-transparent text-base font-medium rounded-md text-white focus:outline-none transition-all duration-300 transform hover:scale-105">
-                <span v-if="!isLoadingProposal">Generate Proposal</span>
-                <span v-else>Generating...</span>
-                <svg v-if="isLoadingProposal" class="animate-spin -mr-1 ml-3 h-5 w-5 text-white"
-                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                  <path class="opacity-75" fill="currentColor"
-                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
-                  </path>
+                <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
+                {{ showToast }}
               </button>
             </div>
-          </div>
-        </div>
 
-
-        <!-- Proposal Result -->
-        <div v-if="generatedProposal" class="mt-8 flex-1 rounded-lg md:p-6 p-4 border
-         bg-white border-gray-200 text-gray-900 dark:bg-gray-900 dark:border-gray-700 dark:text-white ">
-          <div class="flex justify-between items-center mb-4  dark:border-gray-400">
-            <h3 class="text-lg font-medium">Your Custom Proposal</h3>
-            <button @click="copyProposal"
-              class="text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300 flex items-center text-sm">
-              <svg v-if="showToast == 'Copy'" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
-              </svg>
-              <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              {{ showToast }}
-            </button>
-          </div>
-
-          <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg overflow-y-auto">
-            <div contenteditable="true"
-              class="outline-none focus:outline-none whitespace-pre-wrap text-gray-900 dark:text-gray-300">
-              {{ generatedProposal }}
+            <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg overflow-y-auto">
+              <div contenteditable="true"
+                class="outline-none focus:outline-none whitespace-pre-wrap text-gray-900 dark:text-gray-300">
+                {{ generatedProposal }}
+              </div>
             </div>
           </div>
+
         </div>
+
+
+
       </div>
     </div>
   </div>

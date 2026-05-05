@@ -1,4 +1,5 @@
 <template>
+  <Analytics />
   <div class="w-full m-auto flex flex-col items-center relative dark:bg-gray-900">
     <!-- Navbar with two-way dark mode binding -->
     
@@ -13,6 +14,7 @@
 import { ref, watchEffect } from 'vue'
 import { RouterView } from 'vue-router'
 import Navbar from './components/Navbar.vue'
+import { Analytics } from '@vercel/analytics/vue';
 
 // Dark mode state with localStorage persistence
 const darkMode = ref(localStorage.getItem('theme') === 'dark')
